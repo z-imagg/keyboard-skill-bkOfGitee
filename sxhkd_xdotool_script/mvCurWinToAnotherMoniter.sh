@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #参考: http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC/src/branch/main/sxhkd-xdotool.md#%E5%B0%86%E5%BD%93%E5%89%8D%E7%AA%97%E5%8F%A3%E7%A7%BB%E5%8A%A8%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%98%BE%E7%A4%BA%E5%99%A8%E7%9A%84%E5%90%8C%E6%A0%B7%E4%BD%8D%E7%BD%AE%E8%B0%83%E8%AF%95%E8%BF%87%E7%A8%8B
 
