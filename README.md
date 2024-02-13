@@ -25,3 +25,7 @@ git config --global core.filemode false #git 全局忽略 的 文件权限
 
 
 [键盘代替鼠标warpd.md](http://giteaz:3000/misc/sxhkd-xtotool/src/branch/main/keyboard_as_mouse--warpd.md)
+
+
+# npx autocomplete
+[npx_autocomplete.sh](http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC/src/branch/main/npx_autocomplete.sh)
