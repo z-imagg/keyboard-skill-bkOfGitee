@@ -14,4 +14,4 @@ cp sxhkdrc  ~/.config/sxhkd/sxhkdrc
 
 
 
-[键盘代替鼠标warpd.md](http://giteaz:3000/misc/sxhkd-xtotool/src/branch/main/warpd.md)
+[键盘代替鼠标warpd.md](http://giteaz:3000/misc/sxhkd-xtotool/src/branch/main/keyboard_as_mouse--warpd.md)
