@@ -1,14 +1,18 @@
 ```shell
-cd /app/
+Home=/app
+GitRepo=$Home/sxhkd-xtotool--warpd--VimiumC
+cd $Home/
+
 git clone http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC.git
 #/app/sxhkd-xtotool--warpd--VimiumC/.git/config
-chmod +x /app/sxhkd-xtotool--warpd--VimiumC/sxhkd_xdotool_script/*.sh
+git update-index --chmod=+x  sxhkd_xdotool_script/*.sh
+chmod +x $GitRepo/sxhkd_xdotool_script/*.sh
 
 sudo unlink /sxScript
-sudo ln -s /app/sxhkd-xtotool--warpd--VimiumC/sxhkd_xdotool_script   /sxScript
+sudo ln -s $GitRepo/sxhkd_xdotool_script   /sxScript
 
 
-ln -s  /app/sxhkd-xtotool--warpd--VimiumC/.config/sxhkd ~/.config/sxhkd
+ln -s  $GitRepo/.config/sxhkd ~/.config/sxhkd
 
 ```
 
