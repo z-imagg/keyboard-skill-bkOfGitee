@@ -27,4 +27,4 @@ newX=$(( X + signArr[signIdx] * monitor_width ))
 echo "当前窗口在另一个显示器中的X坐标为【$newX】"
 
 
-wmctrl -ir $active_win_id -e 0,$((newX)),$((Y)),$WIDTH,$HEIGHT
+wmctrl -ir $WINDOW -e 0,$((newX)),$((Y)),$WIDTH,$HEIGHT
