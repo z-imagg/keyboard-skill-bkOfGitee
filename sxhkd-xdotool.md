@@ -44,6 +44,40 @@ xdotool search --onlyvisible  webstorm windowactivate  #激活webstorm
 ```
 
 
+## 将当前窗口移动到另一个显示器的同样位置（调试过程） 
+获得当前活动窗口的位置、尺寸```xdotool getwindowgeometry --shell $(xdotool getactivewindow) ```输出：
+```shell
+WINDOW=46137351
+X=2295
+Y=288
+WIDTH=1114
+HEIGHT=680
+SCREEN=0
+```
+
+```xrandr --listmonitors```显示器尺寸如下, 可知 两个显示器的宽度都是1920 
+```txt
+Monitors: 2
+ 0: +*eDP-1-1 1920/344x1080/193+1920+0  eDP-1-1
+ 1: +HDMI-0 1920/344x1080/195+0+0  HDMI-0
+```
+
+```shell
+#获得当前活动窗口尺寸、位置
+eval $(xdotool getwindowgeometry --shell $(xdotool getactivewindow) )
+
+#定义 一个显示器的宽度
+monitor_width=1920
+
+#X 在 区间[0,2*monitor_width] 内，则X的另一个合法位置 X-monitor_width 或 X+monitor_width 只有一个 也在该区间内，以下代码计算X的另一个合法位置
+signArr=(+1 -1)
+signIdx=$(( X / monitor_width ))
+newX=$(( X + signArr[signIdx] * monitor_width ))
+echo "newX: $newX"
+
+
+wmctrl -ir $active_win_id -e 0,$((newX)),$((Y)),$WIDTH,$HEIGHT
+```
 
 ##  sxhkd+xdotool： 激活webstorm窗口
 
