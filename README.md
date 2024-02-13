@@ -7,3 +7,6 @@ cp sxhkd_reboot_delay_async.sh  win_activ_or_boot_new.sh  win_activ.sh  /app/sxh
 cp sxhkdrc  ~/.config/sxhkd/sxhkdrc
 
 ```
+
+
+[sxhkd-xdotool.md](http://giteaz:3000/misc/sxhkd-xtotool/src/branch/main/sxhkd-xdotool.md)， [sxhkd(按键)+xdotool(X11窗口工具）](https://blog.csdn.net/hfcaoguilin/article/details/135623440#t0)
