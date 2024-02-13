@@ -1,4 +1,4 @@
-[warpd.git](https://github.com/rvaiya/warpd.git)
+[键盘代替鼠标warpd.git](https://github.com/rvaiya/warpd.git)
 
 只记得需要从源代码编译，应该是参照的官网README.md编译的
 
