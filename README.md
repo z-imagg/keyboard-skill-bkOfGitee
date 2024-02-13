@@ -11,3 +11,7 @@ cp sxhkdrc  ~/.config/sxhkd/sxhkdrc
 
 
 [sxhkd-xdotool.md](http://giteaz:3000/misc/sxhkd-xtotool/src/branch/main/sxhkd-xdotool.md)， [sxhkd(按键)+xdotool(X11窗口工具）](https://blog.csdn.net/hfcaoguilin/article/details/135623440#t0)
+
+
+
+[键盘代替鼠标warpd.md](http://giteaz:3000/misc/sxhkd-xtotool/src/branch/main/warpd.md)
