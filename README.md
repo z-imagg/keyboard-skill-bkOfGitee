@@ -5,7 +5,7 @@ cd $Home/
 
 git clone http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC.git
 #/app/sxhkd-xtotool--warpd--VimiumC/.git/config
-git update-index --chmod=+x  sxhkd_xdotool_script/*.sh
+git update-index --chmod=+x  sxhkd_xdotool_script/*.sh #git 忽略可执行文件的模式
 chmod +x $GitRepo/sxhkd_xdotool_script/*.sh
 
 sudo unlink /sxScript
