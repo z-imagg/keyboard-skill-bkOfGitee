@@ -1,11 +1,14 @@
 ```shell
-mkdir /app/sxhkd_xdotool_script/
-sudo ln -s /app/sxhkd_xdotool_script   /sxScript
+cd /app/
+git clone http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC.git
+#/app/sxhkd-xtotool--warpd--VimiumC/.git/config
+chmod +x /app/sxhkd-xtotool--warpd--VimiumC/sxhkd_xdotool_script/*.sh
 
-cp sxhkd_reboot_delay_async.sh  win_activ_or_boot_new.sh win_activ_or_boot_new_full.sh  win_activ.sh  /app/sxhkd_xdotool_script/
-chmod +x /app/sxhkd_xdotool_script/*.sh
+sudo unlink /sxScript
+sudo ln -s /app/sxhkd-xtotool--warpd--VimiumC/sxhkd_xdotool_script   /sxScript
 
-cp sxhkdrc  ~/.config/sxhkd/sxhkdrc
+
+ln -s  /app/sxhkd-xtotool--warpd--VimiumC/.config/sxhkd ~/.config/sxhkd
 
 ```
 
