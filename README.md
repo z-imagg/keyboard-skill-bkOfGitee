@@ -5,7 +5,6 @@ cd $Home/
 
 git clone http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC.git
 #/app/sxhkd-xtotool--warpd--VimiumC/.git/config
-git update-index --chmod=+x  sxhkd_xdotool_script/*.sh #git 忽略可执行文件的模式
 chmod +x $GitRepo/sxhkd_xdotool_script/*.sh
 
 sudo unlink /sxScript
@@ -14,6 +13,10 @@ sudo ln -s $GitRepo/sxhkd_xdotool_script   /sxScript
 
 ln -s  $GitRepo/.config/sxhkd ~/.config/sxhkd
 
+
+cd $GitRepo
+git config core.filemode false #git 忽略当前仓库 的 文件权限
+git config --global core.filemode false #git 全局忽略 的 文件权限
 ```
 
 
