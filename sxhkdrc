@@ -1,27 +1,27 @@
 #file path: ~/.config/sxhkd/sxhkdrc
 
 #参考: http://giteaz:3000/misc/sxhkd-xtotool.git
-#重启sxhkd
+#重启sxhkd:  按住alt+z松开，按s松开
 alt + z ; s ;
        /sxScript/sxhkd_reboot_delay_async.sh
 
-#激活webstorm窗口
+#激活webstorm窗口:  按住alt+w松开，按s松开
 alt + w ; s ;
       /sxScript/win_activ.sh  webstorm
 
-#激活firefox窗口
+#激活firefox窗口:  按住alt+f松开，按f松开
 alt + f ; f ;
       /sxScript/win_activ.sh firefox
 
-#激活窗口或新启动gedit
+#激活窗口或新启动gedit:  按住alt+g松开，按e松开
 alt + g ; e ; 
       /sxScript/win_activ_or_boot_new.sh gedit
  
-#激活窗口或新启动gnome-terminal
+#激活窗口或新启动gnome-terminal:  按住alt+g松开，按t松开
 alt + g ; t ;
       /sxScript/win_activ_or_boot_new.sh gnome-terminal 
   
-#激活窗口或新启动GitKraken
+#激活窗口或新启动GitKraken:  按住alt+g松开，按k松开
 alt + g ; k ;
       /sxScript/win_activ_or_boot_new_full.sh gitkraken GitKraken /app/gitkraken/gitkraken-no-sandbox.sh
  
