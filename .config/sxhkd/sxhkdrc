@@ -14,9 +14,9 @@ alt + shift + x ;
 alt + shift + z ;
        echo 'reboot_then_dialog' > /tmp/sxhd_reboot_namePIPE_ 
 
-##webstorm : alt+d 1
-#激活webstorm窗口:  按住alt+d松开，按1松开 : iDe webstorm
-alt + d ; 1 ;
+##webstorm : alt+d d
+#激活webstorm窗口:  按住alt+d松开，按d松开 : iDe webstorm
+alt + d ; d ;
       bash /sxScript/win_activ.sh  webstorm
 
 ##firefox : alt+b b
