@@ -9,6 +9,30 @@
 #             reboot : 重启sxhkd 
 #             reboot_then_dialog : 重启sxhkd 并以 kdialog显示sxhkd配置文件中的快捷键说文档
 
+function dialog_notification() {
+# set +x
+
+#sudo apt install  zenity
+
+
+#若函数参数少于1个，则直接返回(退出码依然为0)
+[ $# -lt 1 ] && { return 0 ;}
+
+_msgTxt=$1
+
+# 通知窗口： 持续时长约10秒由操作系统ubuntu22控制（不由命令控制）、 不占用焦点
+#zenity --timeout 1 --notification --text "zzzz"
+#kdialog --title "TITLE" --passivepopup "xxx" 1
+
+#非通知的一般窗口： 持续时长由命令设置、占用的焦点
+zenity --timeout 1 --info --text "$_msgTxt"
+
+
+
+# set -x
+
+}
+
 function dialog_sxhkd_shortKey() {
 # set +x
 
@@ -46,7 +70,7 @@ while true; do
   read msg < $F_NamePIPE # 当 命名管道文件 中没有内容时， 阻塞等待在此行
 
   if [[ "$msg" == "$Cmd_Reboot" ]] ; then
-    reboot_sxhkd
+    reboot_sxhkd && dialog_notification "正常重启sxhkd"
   fi
   
   if [[ "$msg" == "$Cmd_RebootThenDialog"  ]] ; then
