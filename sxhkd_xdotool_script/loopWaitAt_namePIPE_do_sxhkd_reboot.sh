@@ -22,7 +22,7 @@ _msgTxt=$1
 
 # 通知窗口： 持续时长约10秒由操作系统ubuntu22控制（不由命令控制）、 不占用焦点
 #zenity --timeout 1 --notification --text "zzzz"
-kdialog --title "$_msgTxt" --passivepopup "newPid:$newPid" 1
+kdialog --title "$_msgTxt" --passivepopup "newSxhkdPid:$newSxhkdPid" 1
 
 #非通知的一般窗口： 持续时长由命令设置、占用的焦点
 # zenity --timeout 1 --info --text "$_msgTxt"
@@ -47,7 +47,7 @@ grep "##" /app/keyboard-skill/.config/sxhkd/sxhkdrc | sed "s/##//g" | kdialog --
 
 function reboot_sxhkd() {
 
-  { pkill --exact -f  sxhkd || echo -n "当前无进程sxhkd，即将新启动," ;} && { { sxhkd & } && newPid=$! && echo "新进程ID:$newPid" ;} 
+  { pkill --exact -f  sxhkd || echo -n "当前无进程sxhkd，即将新启动," ;} && { { sxhkd & } && newSxhkdPid=$! && echo "新进程ID:$newSxhkdPid" ;} 
 
 }
 
