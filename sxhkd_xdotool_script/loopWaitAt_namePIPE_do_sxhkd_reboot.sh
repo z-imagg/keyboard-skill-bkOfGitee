@@ -40,7 +40,7 @@ function dialog_sxhkd_shortKey() {
 
 #用kdialog显示一个对本自定义快捷键干净的窗口
 pkill --exact -f kdialog
-grep "##" /app/keyboard-skill/.config/sxhkd/sxhkdrc | sed "s/##//g" | kdialog --textbox -  650 300 &
+grep "##" /app/keyboard-skill/.config/sxhkd/sxhkdrc | sed "s/##//g" | kdialog --title "newSxhkdPid:$newSxhkdPid; sxhkd按键" --textbox -  350 300 &
 #kdialog 文档: https://develop.kde.org/docs/administration/kdialog/#kdialog-dialog-types
 # set -x
 }
