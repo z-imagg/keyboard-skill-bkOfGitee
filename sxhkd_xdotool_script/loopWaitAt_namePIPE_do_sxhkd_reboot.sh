@@ -12,7 +12,7 @@
 function dialog_sxhkd_shortKey() {
 set +x
 #用kdialog显示一个对本自定义快捷键干净的窗口
-pkill -f $(which kdialog)
+pkill --exact -f kdialog
 grep "##" /app/keyboard-skill/.config/sxhkd/sxhkdrc | sed "s/##//g" | kdialog --textbox -  650 300 &
 #kdialog 文档: https://develop.kde.org/docs/administration/kdialog/#kdialog-dialog-types
 set -x
@@ -20,7 +20,7 @@ set -x
 
 function reboot_sxhkd() {
 
-  { pkill -f  $(which sxhkd) || echo -n "当前无进程sxhkd，即将新启动," ;} && { { sxhkd & } && newPid=$! && echo "新进程ID:$newPid" ;} 
+  { pkill --exact -f  sxhkd || echo -n "当前无进程sxhkd，即将新启动," ;} && { { sxhkd & } && newPid=$! && echo "新进程ID:$newPid" ;} 
 
 }
 
