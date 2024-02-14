@@ -10,12 +10,12 @@
 #             reboot_then_dialog : 重启sxhkd 并以 kdialog显示sxhkd配置文件中的快捷键说文档
 
 function dialog_sxhkd_shortKey() {
-set +x
+# set +x
 #用kdialog显示一个对本自定义快捷键干净的窗口
 pkill --exact -f kdialog
 grep "##" /app/keyboard-skill/.config/sxhkd/sxhkdrc | sed "s/##//g" | kdialog --textbox -  650 300 &
 #kdialog 文档: https://develop.kde.org/docs/administration/kdialog/#kdialog-dialog-types
-set -x
+# set -x
 }
 
 function reboot_sxhkd() {
@@ -24,12 +24,12 @@ function reboot_sxhkd() {
 
 }
 
-set -x
+# set -x
 
 F_NamePIPE=/tmp/sxhd_reboot_namePIPE_
 
 #删除命名管道，防止存在
-rm -fv $F_NamePIPE
+rm -f $F_NamePIPE
 
 #创建命名管道
 mkfifo $F_NamePIPE
@@ -38,7 +38,7 @@ Cmd_Reboot='reboot'
 Cmd_RebootThenDialog='reboot_then_dialog'
 
 while true; do
-  set -x
+  # set -x
   
   read msg < $F_NamePIPE # 当 命名管道文件 中没有内容时， 阻塞等待在此行
 
@@ -53,4 +53,4 @@ while true; do
 
 done
 
-set +x
+# set +x
