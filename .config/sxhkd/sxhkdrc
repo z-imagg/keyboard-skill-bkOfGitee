@@ -26,9 +26,9 @@ alt + t ; t ;
       /sxScript/win_activ_or_boot_new_full.sh gnome-terminal-server gnome-terminal /usr/bin/gnome-terminal
 #                                            参数1: process_name   参数2: win_name  参数3: cmd_full
 
-#激活terminator窗口:  按住alt+t松开，按2松开 : Terminal terminator
+#激活terminator窗口:  按住alt+t松开，按1松开 : Terminal terminator
 #terminator是python3编写的, pidof 无法直接按照terminator查找，因此目前不支持启动terminator
-alt + t ; 2 ; 
+alt + t ; 1 ; 
       /sxScript/win_activ.sh terminator
   
 #激活窗口或新启动GitKraken:  按住alt+r松开，按1松开 : gitRepo gitkraken
