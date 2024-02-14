@@ -2,9 +2,11 @@
 
 #参考: http://giteaz:3000/misc/sxhkd-xtotool.git
 
-#重启sxhkd:  echo 'reboot' > /tmp/sxhd_reboot_namePIPE_ 
-
-#sudo apt install  kdialog
+#重启sxhkd(发送指令到命名管道触发外部脚本重启sxhkd):  
+##sxhkd : alt+shift+x
+#重启sxhkd(发送指令到命名管道触发外部脚本重启sxhkd):  按住alt+shift+x松开
+alt + shift + x ;
+       echo 'reboot' > /tmp/sxhd_reboot_namePIPE_ 
 
 ##webstorm : alt+d 1
 #激活webstorm窗口:  按住alt+d松开，按1松开 : iDe webstorm
