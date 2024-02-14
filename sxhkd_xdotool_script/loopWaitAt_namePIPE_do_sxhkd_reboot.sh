@@ -40,7 +40,7 @@ Cmd_RebootThenDialog='reboot_then_dialog'
 while true; do
   set -x
   
-  if read msg < $F_NamePIPE ; then
+  read msg < $F_NamePIPE # 当 命名管道文件 中没有内容时， 阻塞等待在此行
 
     if [[ "$msg" == "$Cmd_Reboot" ]] ; then
       reboot_sxhkd
@@ -50,7 +50,6 @@ while true; do
       reboot_sxhkd &&  dialog_sxhkd_shortKey
     fi
   
-  fi
 
 done
 
