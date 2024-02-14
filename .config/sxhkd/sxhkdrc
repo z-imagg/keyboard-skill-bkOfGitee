@@ -1,10 +1,8 @@
 #file path: ~/.config/sxhkd/sxhkdrc
 
 #参考: http://giteaz:3000/misc/sxhkd-xtotool.git
-##sxhkd : alt+shift+x
-#重启sxhkd:  按住alt+shift+x松开
-alt + shift + x ;
-       bash /sxScript/sxhkd_reboot_delay_async.sh
+
+#重启sxhkd:  echo 'reboot' > /tmp/sxhd_reboot_namePIPE_ 
 
 #sudo apt install  kdialog
 
