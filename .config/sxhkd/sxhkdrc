@@ -21,8 +21,8 @@ alt + b ; 1 ;
 alt + e ; e ; 
       /sxScript/win_activ_or_boot_new.sh gedit
  
-#激活窗口或新启动gnome-terminal:  按住alt+t松开，按1松开 : Terminal gnome-terminal
-alt + t ; 1 ;
+#激活窗口或新启动gnome-terminal:  按住alt+t松开，按t松开 : Terminal gnome-terminal
+alt + t ; t ;
       /sxScript/win_activ_or_boot_new.sh gnome-terminal 
 
 #激活terminator窗口:  按住alt+t松开，按2松开 : Terminal terminator
