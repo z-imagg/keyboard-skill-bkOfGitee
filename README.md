@@ -1,11 +1,32 @@
+
+## 拉取本代码仓库
 ```shell
 Home=/app
-GitRepo=$Home/sxhkd-xtotool--warpd--VimiumC
+GitRepo=$Home/keyboard-skill
 cd $Home/
 
-git clone http://giteaz:3000/wiki/sxhkd-xtotool--warpd--VimiumC.git
-#/app/sxhkd-xtotool--warpd--VimiumC/.git/config
-chmod +x $GitRepo/sxhkd_xdotool_script/*.sh
+git clone http://giteaz:3000/wiki/keyboard-skill.git
+#/app/keyboard-skill/.git/config
+
+
+cd $GitRepo
+git config core.filemode false #git 忽略当前仓库 的 文件权限
+git config --global core.filemode false #git 全局忽略 的 文件权限
+
+```
+
+## 按键触发命令(sxhkd)、X11窗口操纵(xdotool)
+
+### (只做一次) 安装、配置 ： 按键触发命令(sxhkd)、X11窗口操纵(xdotool) 
+
+[git仓库, 按键触发命令(sxhkd)、X11窗口操纵(xdotool)](http://giteaz:3000/wiki/keyboard-skill/src/branch/main/sxhkd-xdotool.md)， 
+
+或 [csdn, sxhkd(按键)+xdotool(X11窗口工具）](https://blog.csdn.net/hfcaoguilin/article/details/135623440#t0)
+
+
+
+### 关联 本仓库的  按键触发命令(sxhkd) 到 本地操作系统
+```shell
 
 sudo unlink /sxScript
 sudo ln -s $GitRepo/sxhkd_xdotool_script   /sxScript
@@ -14,27 +35,24 @@ sudo ln -s $GitRepo/sxhkd_xdotool_script   /sxScript
 ln -s  $GitRepo/.config/sxhkd ~/.config/sxhkd
 
 
-cd $GitRepo
-git config core.filemode false #git 忽略当前仓库 的 文件权限
-git config --global core.filemode false #git 全局忽略 的 文件权限
 ```
 
+###  开机启动(手动)
+```shell
+bash /app/keyboard-skill/sxhkd_xdotool_script/loopWaitAt_namePIPE_do_sxhkd_reboot.sh
+```
 
-[sxhkd-xdotool.md](http://giteaz:3000/misc/sxhkd-xtotool/src/branch/main/sxhkd-xdotool.md)， [sxhkd(按键)+xdotool(X11窗口工具）](https://blog.csdn.net/hfcaoguilin/article/details/135623440#t0)
+##  键盘代替鼠标warpd
 
+[键盘代替鼠标warpd.md](http://giteaz:3000/wiki/keyboard-skill/src/branch/main/keyboard_as_mouse--warpd.md)
 
-
-[键盘代替鼠标warpd.md](http://giteaz:3000/misc/sxhkd-xtotool/src/branch/main/keyboard_as_mouse--warpd.md)
-
-
-# npx autocomplete
-[npx_autocomplete.sh](http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC/src/branch/main/npx_autocomplete.sh)
-
-
-
-# 开机启动(手动)
+###  开机启动(手动)
 ```shell
 /app/warpd/bin/warpd &
-
-/sxScript/sxhkd_reboot_delay_async.sh
 ```
+
+## npx autocomplete
+[npx_autocomplete.sh](http://giteaz:3000/wiki/keyboard-skill/src/branch/main/npx_autocomplete.sh)，复制自[gibatronic#gistcomment-3893973](https://gist.github.com/gibatronic/44073260ffdcbd122e9520756c8e35a1?permalink_comment_id=3893973#gistcomment-3893973)
+
+
+
