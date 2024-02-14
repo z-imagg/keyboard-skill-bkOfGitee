@@ -29,3 +29,12 @@ git config --global core.filemode false #git 全局忽略 的 文件权限
 
 # npx autocomplete
 [npx_autocomplete.sh](http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC/src/branch/main/npx_autocomplete.sh)
+
+
+
+# 开机启动(手动)
+```shell
+/app/warpd/bin/warpd &
+
+/sxScript/sxhkd_reboot_delay_async.sh
+```
