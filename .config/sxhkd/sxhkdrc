@@ -1,47 +1,44 @@
 #file path: ~/.config/sxhkd/sxhkdrc
 
 #参考: http://giteaz:3000/misc/sxhkd-xtotool.git
-#重启sxhkd:  按住alt+shift+x松开
+##重启sxhkd:  按住alt+shift+x松开
 alt + shift + x ;
        /sxScript/sxhkd_reboot_delay_async.sh
 
-#用kdialog显示一个对本自定义快捷键干净的窗口:  按住alt+shift+c松开
-alt + shift + c ;
-       kdialog --textbox /app/keyboard-skill/.config/sxhkd/sxhkdrc  800 900
 #sudo apt install  kdialog
 
-#激活webstorm窗口:  按住alt+d松开，按1松开 : iDe webstorm
+##激活webstorm窗口:  按住alt+d松开，按1松开 : iDe webstorm
 alt + d ; 1 ;
       /sxScript/win_activ.sh  webstorm
 
-#激活firefox窗口:  按住alt+b松开，按b松开 : Browser firefox
+##激活firefox窗口:  按住alt+b松开，按b松开 : Browser firefox
 alt + b ; b ;
       /sxScript/win_activ.sh firefox
 
-#激活chromium窗口:  按住alt+b松开，按1松开 : Browser chromium
+##激活chromium窗口:  按住alt+b松开，按1松开 : Browser chromium
 alt + b ; 1 ;
       /sxScript/win_activ.sh chromium
 
-#激活窗口或新启动gedit:  按住alt+e松开，按e松开 : Edit gEdit
+##激活窗口或新启动gedit:  按住alt+e松开，按e松开 : Edit gEdit
 alt + e ; e ; 
       /sxScript/win_activ_or_boot_new.sh gedit
  
-#激活窗口或新启动gnome-terminal:  按住alt+t松开，按t松开 : Terminal gnome-terminal
+##激活窗口或新启动gnome-terminal:  按住alt+t松开，按t松开 : Terminal gnome-terminal
 alt + t ; t ;
       /sxScript/win_activ_or_boot_new_full.sh gnome-terminal-server gnome-terminal /usr/bin/gnome-terminal
 #                                            参数1: process_name   参数2: win_name  参数3: cmd_full
 
-#激活terminator窗口:  按住alt+t松开，按1松开 : Terminal terminator
+##激活terminator窗口:  按住alt+t松开，按1松开 : Terminal terminator
 #terminator是python3编写的, pidof 无法直接按照terminator查找，因此目前不支持启动terminator
 alt + t ; 1 ; 
       /sxScript/win_activ.sh terminator
   
-#激活窗口或新启动GitKraken:  按住alt+r松开，按r松开 : gitRepo gitkraken
+##激活窗口或新启动GitKraken:  按住alt+r松开，按r松开 : gitRepo gitkraken
 alt + r ; r ;
       /sxScript/win_activ_or_boot_new_full.sh gitkraken GitKraken /app/gitkraken/gitkraken-no-sandbox.sh
 #                                      参数1: process_name   参数2: win_name  参数3: cmd_full
 
-#将当前窗口移动到另一个显示器的同样位置:  按住alt+w松开，按m松开 : Window Move
+##将当前窗口移动到另一个显示器的同样位置:  按住alt+w松开，按m松开 : Window Move
 alt + w ; m ;
       /sxScript/mvCurWinToAnotherMoniter.sh
  
