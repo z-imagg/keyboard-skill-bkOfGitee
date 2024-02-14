@@ -56,3 +56,7 @@ bash /app/keyboard-skill/sxhkd_xdotool_script/loopWaitAt_namePIPE_do_sxhkd_reboo
 
 
 
+###  ~/.bashrc添加以下内容
+```shell
+source /app/keyboard-skill/npx_autocomplete.sh
+```
