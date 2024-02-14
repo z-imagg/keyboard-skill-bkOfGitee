@@ -5,6 +5,11 @@
 alt + shift + x ;
        /sxScript/sxhkd_reboot_delay_async.sh
 
+#用kdialog显示一个对本自定义快捷键干净的窗口:  按住alt+shift+c松开
+alt + shift + c ;
+       kdialog --textbox /app/keyboard-skill/.config/sxhkd/sxhkdrc  800 900
+#sudo apt install  kdialog
+
 #激活webstorm窗口:  按住alt+d松开，按1松开 : iDe webstorm
 alt + d ; 1 ;
       /sxScript/win_activ.sh  webstorm
