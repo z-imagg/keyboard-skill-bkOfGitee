@@ -3,7 +3,7 @@ Home=/app
 GitRepo=$Home/sxhkd-xtotool--warpd--VimiumC
 cd $Home/
 
-git clone http://giteaz:3000/misc/sxhkd-xtotool--warpd--VimiumC.git
+git clone http://giteaz:3000/wiki/sxhkd-xtotool--warpd--VimiumC.git
 #/app/sxhkd-xtotool--warpd--VimiumC/.git/config
 chmod +x $GitRepo/sxhkd_xdotool_script/*.sh
 
