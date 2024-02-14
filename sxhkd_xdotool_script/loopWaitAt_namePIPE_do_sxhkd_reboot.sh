@@ -22,10 +22,10 @@ _msgTxt=$1
 
 # 通知窗口： 持续时长约10秒由操作系统ubuntu22控制（不由命令控制）、 不占用焦点
 #zenity --timeout 1 --notification --text "zzzz"
-#kdialog --title "TITLE" --passivepopup "xxx" 1
+kdialog --title "$_msgTxt" --passivepopup "newPid:$newPid" 1
 
 #非通知的一般窗口： 持续时长由命令设置、占用的焦点
-zenity --timeout 1 --info --text "$_msgTxt"
+# zenity --timeout 1 --info --text "$_msgTxt"
 
 
 
