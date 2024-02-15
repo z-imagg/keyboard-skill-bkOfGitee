@@ -33,7 +33,13 @@ alt + b ; 1 ;
 #激活窗口或新启动gedit:  按住alt+e松开，按e松开 : Edit gEdit
 alt + e ; e ; 
       bash /sxScript/win_activ_or_boot_new.sh gedit
- 
+
+##notepad-- : alt+e 1
+#激活窗口或新启动notepad--:  按住alt+e松开，按1松开 : Edit noteapd--
+alt + e ; 1 ; 
+      bash /sxScript/win_activ_or_boot_new_full.sh notepad--_subtwo-2.12-x86_64.AppImage Ndd /app/notepad--_subtwo-2.12-x86_64.AppImage
+#                                            参数1: process_name   参数2: win_name  参数3: cmd_full
+
 ##gnome-terminal : alt+t t
 #激活窗口或新启动gnome-terminal:  按住alt+t松开，按t松开 : Terminal gnome-terminal
 alt + t ; t ;
