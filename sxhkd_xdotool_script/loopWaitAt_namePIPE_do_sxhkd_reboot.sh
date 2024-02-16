@@ -64,6 +64,11 @@ mkfifo $F_NamePIPE
 Cmd_Reboot='reboot'
 Cmd_RebootThenDialog='reboot_then_dialog'
 
+#用于首次启动的指令(写命名管道会阻塞，因此后台运行)
+sh -c " echo 'reboot' > $F_NamePIPE " & 
+#休眠极短时间,防止上一条后台命令还没到达
+sleep 0.1
+
 while true; do
   # set -x
   
