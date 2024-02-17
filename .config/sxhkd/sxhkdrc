@@ -14,6 +14,11 @@ alt + shift + x ;
 alt + shift + z ;
        echo 'reboot_then_dialog' > /tmp/sxhd_reboot_namePIPE_ 
 
+##最小化当前窗口 : alt + shift + q
+#最小化当前窗口 : 按住alt + shift + q松开
+alt + shift + q ;
+       xdotool windowminimize $(xdotool getactivewindow )
+
 ##webstorm : alt+d d
 #激活webstorm窗口:  按住alt+d松开，按d松开 : iDe webstorm
 alt + d ; d ;
