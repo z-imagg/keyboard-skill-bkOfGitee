@@ -16,12 +16,13 @@ alt + shift + z ;
 
 ##最小化当前窗口 : alt + F1
 #最小化当前窗口 : 按住 alt + F1 松开
-# 注意: ubuntu22默认占用了 alt+F1, 到 settings --> 键盘  --> 键盘快捷键 --> 查看及自定义快捷键   中 找到 alt+F1 禁用即可
+# 注意: ubuntu22默认占用了 alt+F1, 到 settings --> 键盘  --> 键盘快捷键 --> 查看及自定义快捷键   中 找到 alt+F1 禁用即可.  (搜索框 中 输入 F1, 即可找到)
 alt + F1 ;
        xdotool windowminimize $(xdotool getactivewindow )
 
 ##最大化当前窗口 : alt + F2
 #最小化当前窗口 : 按住 alt + F2 松开
+# 注意: ubuntu22默认占用了 alt+F2, 到 settings --> 键盘  --> 键盘快捷键 --> 查看及自定义快捷键   中 找到 alt+F2 禁用即可.  (搜索框 中 输入 F2, 即可找到)
 alt + F2 ;
        wmctrl -ir   $(xdotool getactivewindow)  -b add,maximized_vert,maximized_horz
 
