@@ -1,6 +1,0 @@
-SHELL=/bin/sh
-
-*/5 * * * * z   /app/keyboard-skill/ibus_reboot/ibus_reboot.sh
-
-#sudo ln -s /app/keyboard-skill/ibus_reboot/ibus_reboot_cron /etc/cron.d/ibus_reboot_cron
-

@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name = ibus_reboot
-Exec = bash /app/keyboard-skill/ibus_reboot/ibus_reboot.sh
-Icon = 
-Type = Application
-
