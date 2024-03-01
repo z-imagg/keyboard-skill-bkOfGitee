@@ -19,9 +19,11 @@ git config --global core.filemode false #git 全局忽略 的 文件权限
 
 ### (只做一次) 安装、配置 ： 按键触发命令(sxhkd)、X11窗口操纵(xdotool) 
 
-[git仓库, 按键触发命令(sxhkd)、X11窗口操纵(xdotool)](http://giteaz:3000/wiki/keyboard-skill/src/branch/main/sxhkd-xdotool.md)， 
+按键触发命令(sxhkd)、X11窗口操纵(xdotool)  :  http://giteaz:3000/wiki/keyboard-skill/src/branch/main/sxhkd-xdotool.md， 
+或 https://blog.csdn.net/hfcaoguilin/article/details/135623440#t0)
 
-或 [csdn, sxhkd(按键)+xdotool(X11窗口工具）](https://blog.csdn.net/hfcaoguilin/article/details/135623440#t0)
+
+```sudo apt install kdialog```
 
 
 
