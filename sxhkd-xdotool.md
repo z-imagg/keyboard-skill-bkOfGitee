@@ -1,3 +1,5 @@
+**前提： 禁止Wayland（恢复x11协议）**, https://blog.csdn.net/hfcaoguilin/article/details/135203694#t7
+
 [sxhkd(按键)+xdotool(X11窗口工具）](https://blog.csdn.net/hfcaoguilin/article/details/135623440#t0)
 
 
