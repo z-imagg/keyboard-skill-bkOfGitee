@@ -19,7 +19,7 @@ git config --global core.filemode false #git 全局忽略 的 文件权限
 
 ###  安装、配置 ： 按键触发命令(sxhkd)、X11窗口操纵(xdotool) 
 
-（前提） 禁止Wayland（恢复x11协议）,  https://blog.csdn.net/hfcaoguilin/article/details/135203694#t7
+**前提： 禁止Wayland（恢复x11协议）**, https://blog.csdn.net/hfcaoguilin/article/details/135203694#t7
 
 按键触发命令(sxhkd)、X11窗口操纵(xdotool)  :  http://giteaz:3000/wiki/keyboard-skill/src/branch/main/sxhkd-xdotool.md， 
 或 https://blog.csdn.net/hfcaoguilin/article/details/135623440#t0)
