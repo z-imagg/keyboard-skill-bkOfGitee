@@ -46,9 +46,9 @@ alt + b ; b ;
       bash /sxScript/win_activ_or_boot_new_full.sh firefox FireFox /app/firefox/firefox
 #                                            参数1: process_name   参数2: win_name  参数3: cmd_full
 
-##chromium : alt+b 1
+##chromium : alt+b c
 #激活chromium窗口:  按住alt+b松开，按1松开 : Browser chromium
-alt + b ; 1 ;
+alt + b ; c ;
       bash /sxScript/win_activ_or_boot_new_full.sh chrome chromium  /app/chrome-linux/chrome
 #                                            参数1: process_name   参数2: win_name  参数3: cmd_full
 
