@@ -13,3 +13,8 @@ echo "process_name=【$process_name】,win_name=【$win_name】,cmd_full=【$cmd
 set -x
 ( pidof $process_name && xdotool search --onlyvisible  $win_name windowactivate ) || ( set +x && echo "新启动【$cmd_full】" && $cmd_full & ) 
 set +x
+
+#调试语句（给定窗口名，打印窗口id、命令全路径、窗口全名）：
+#xdotool search --onlyvisible  notepad  | xargs -I@ sh -c "echo -n @: ; xdotool getwindowname @"
+#Defaulting to search window name, class, and classname
+#58720264:/app/keyboard-skill/sxhkd_xdotool_script/win_activ_or_boot_new_full.sh — Notepad Next
