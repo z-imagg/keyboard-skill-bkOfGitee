@@ -1,5 +1,7 @@
 #file path: ~/.config/sxhkd/sxhkdrc
 
+#sxhkd按键名称列表： https://github.com/baskerville/sxhkd/blob/master/src/parse.c
+
 #参考: http://giteaz:3000/misc/sxhkd-xtotool.git
 
 #重启sxhkd(发送重启指令到命名管道触发外部脚本重启sxhkd):  
@@ -31,9 +33,9 @@ alt + F2 ;
 alt + F3 ;
        wmctrl -ir   $(xdotool getactivewindow)  -b remove,maximized_vert,maximized_horz
 
-##最小化非当前窗口 : alt + esc
-#最小化非当前窗口 : 按住 alt + esc 松开
-alt + esc ;
+##最小化非当前窗口 : alt + Escape
+#最小化非当前窗口 : 按住 alt + Escape 松开
+alt + Escape ;
        bash /sxScript/min_all_win_except_cur.sh
 
 
