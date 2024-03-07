@@ -21,15 +21,21 @@ alt + F1 ;
        xdotool windowminimize $(xdotool getactivewindow )
 
 ##最大化当前窗口 : alt + F2
-#最小化当前窗口 : 按住 alt + F2 松开
+#最大化当前窗口 : 按住 alt + F2 松开
 # 注意: ubuntu22默认占用了 alt+F2, 到 settings --> 键盘  --> 键盘快捷键 --> 查看及自定义快捷键   中 找到 alt+F2 禁用即可.  (搜索框 中 输入 F2, 即可找到)
 alt + F2 ;
        wmctrl -ir   $(xdotool getactivewindow)  -b add,maximized_vert,maximized_horz
 
 ##还原当前窗口尺寸 : alt + F3
-#最小化当前窗口 : 按住 alt + F3 松开
+#还原当前窗口尺寸 : 按住 alt + F3 松开
 alt + F3 ;
        wmctrl -ir   $(xdotool getactivewindow)  -b remove,maximized_vert,maximized_horz
+
+##最小化非当前窗口 : alt + F4
+#最小化非当前窗口 : 按住 alt + F4 松开
+alt + F3 ;
+       wmctrl -ir   $(xdotool getactivewindow)  -b remove,maximized_vert,maximized_horz
+
 
 #单键测试 : 按住 右Ctrl 松开（慎用，会占用 Ctrl+任意按键 )
 #~{Control_R} ;
