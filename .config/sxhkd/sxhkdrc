@@ -36,7 +36,7 @@ alt + F3 ;
 ##最小化非当前窗口 : alt + Escape
 #最小化非当前窗口 : 按住 alt + Escape 松开
 alt + Escape ;
-       bash /sxScript/min_all_win_except_cur.sh
+       bash -x /sxScript/min_all_win_except_cur.sh
 
 
 #单键测试 : 按住 右Ctrl 松开（慎用，会占用 Ctrl+任意按键 )
