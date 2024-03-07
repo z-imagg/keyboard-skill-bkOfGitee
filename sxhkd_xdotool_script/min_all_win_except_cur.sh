@@ -9,5 +9,4 @@ curr_win_id=$(xdotool getactivewindow )
 wmctrl -k on
 
 # 3.还原当前窗口尺寸
-wmctrl -ir   ${curr_win_id}  -b remove,maximized_vert,maximized_horz
-
+wmctrl -ir   ${curr_win_id}   -b add,maximized_vert,maximized_horz
