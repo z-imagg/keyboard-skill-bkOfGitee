@@ -1,4 +1,7 @@
 
+sxhkd按键名称列表： https://github.com/baskerville/sxhkd/blob/master/src/parse.c
+
+
 ## 拉取本代码仓库
 ```shell
 Home=/app
