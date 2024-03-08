@@ -48,6 +48,12 @@ alt + Escape ;
 alt + d ; d ;
       bash /sxScript/win_activ.sh  webstorm
 
+##vscode : alt+d c
+#激活vscode窗口:  按住alt+d松开，按c松开 : vscode
+alt + d ; c ;
+      bash /sxScript/win_activ_or_boot_new_full.sh code "Visual Studio Code" /app/bin/vscode
+#                                            参数1: process_name   参数2: win_name  参数3: cmd_full
+
 ##firefox : alt+b f
 #激活firefox窗口:  按住alt+f松开，按b松开 : Browser firefox
 alt + b ; f ;

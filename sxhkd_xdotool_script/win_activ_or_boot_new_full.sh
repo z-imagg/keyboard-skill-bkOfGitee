@@ -11,7 +11,7 @@ cmd_full=$3
 echo "process_name=【$process_name】,win_name=【$win_name】,cmd_full=【$cmd_full】"
 
 set -x
-( pidof $process_name && xdotool search --onlyvisible  $win_name windowactivate ) || ( set +x && echo "新启动【$cmd_full】" && $cmd_full & ) 
+( pidof $process_name && xdotool search --onlyvisible  "$win_name" windowactivate ) || ( set +x && echo "新启动【$cmd_full】" && $cmd_full & ) 
 set +x
 
 #调试语句（给定窗口名，打印窗口id、命令全路径、窗口全名）：
