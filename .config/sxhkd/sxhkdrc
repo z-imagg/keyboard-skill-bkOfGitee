@@ -66,6 +66,15 @@ alt + b ; c ;
       bash /sxScript/win_activ_or_boot_new_full.sh chrome chromium  /app/chrome-linux/chrome
 #                                            参数1: process_name   参数2: win_name  参数3: cmd_full
 
+##chromium : alt+b alt+c
+#激活chromium窗口:  按住alt+b松开，按alt+c松开 : Browser chromium  --remote-debugging-port=9222
+alt + b ; alt + c ;
+      bash /sxScript/win_activ_or_boot_new_full.sh chrome chromium  "/app/chrome-linux/chrome --remote-debugging-port=9222"
+#                                            参数1: process_name   参数2: win_name  参数3: cmd_full
+#https://github.com/cyrus-and/chrome-remote-interface.git
+#npm install -g  chrome-remote-interface
+#列出chrome打开的tab列表: chrome-remote-interface -t 127.0.0.1 -p 9222 list
+
 ##gedit-- : alt+e g
 #激活窗口或新启动gedit:  按住alt+e松开，按g松开 : Edit gedit
 alt + e ; g ; 
