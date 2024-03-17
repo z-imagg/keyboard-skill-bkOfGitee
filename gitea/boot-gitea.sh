@@ -3,7 +3,7 @@
 
 usage='su - g -c "bash /home/g/boot-gitea.sh"'
 
-[[ "_$(whoami)" == "_g" ]] ||  {  echo "请你切换到用户g，再执行此脚本。例子用法【${usage}】,建议别名【alias BootGitea='${usage}'】" ; exit 3 ;}
+[[ "_$(whoami)" == "_g" ]] ||  {  echo "请你切换到用户g，再执行此脚本。例子用法【${usage}】,建议别名【alias BG='${usage}'】" ; exit 3 ;}
 
 #echo "脚本准开头， \$0==【$0】, whoami==【$(whoami)】"
 cd /home/g/
