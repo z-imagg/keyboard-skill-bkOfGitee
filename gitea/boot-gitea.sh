@@ -10,7 +10,7 @@ cd /home/g/
 #/home/g/gitea-1.21.2-linux-arm64
 
 #列出目录/home/g/下第一个以gitea-开头的可执行文件的名字，不要全路径
-GiteaF=$(basename $(find $(pwd) -maxdepth 1 -type f -name 'gitea-*' -executable | head -n 1))
+GiteaF=$(basename $(find $(pwd)/ -maxdepth 1 -type f -name 'gitea-*' -executable | head -n 1))
 #GiteaF==gitea-1.21.2-linux-arm64
 
 #若已启动，只打印消息
