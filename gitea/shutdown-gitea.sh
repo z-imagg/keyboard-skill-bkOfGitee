@@ -14,7 +14,7 @@ GiteaF=$(basename $(find $(pwd) -maxdepth 1 -type f -name 'gitea-*' -executable 
 #GiteaF==gitea-1.21.2-linux-arm64
 
 #若已启动，则关闭进程
-{ PID=$(pidof ${GiteaF})  &&   echo "关闭中...【${GiteaF}】,PID=【${PID}】" && ./${GiteaF} manager shutdown && echo "已关闭" ;} || \
+{ PID=$(pidof ${GiteaF})  &&   echo -n  "关闭中...【${GiteaF}】,PID=【${PID}】," && ./${GiteaF} manager shutdown && echo "已关闭" ;} || \
 #注意上一行末尾的续行符号\后不能有任何多余字符，空格也不能有，否则语法错误。 
 # 且夹在续行符号\和紧跟着的下一条命令之间的这几行注释 的#前不能有任何字符，空格也不能有，否则语法错误。
 #否则（即未启动） 只打印消息    
