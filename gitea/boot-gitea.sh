@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 
-usage='su - g -c "bash /home/g/boot-gitea.sh"'
+Hm=$(pwd)
+#例如 Hm==/home/g
+usage="su - g -c 'bash ${Hm}/boot-gitea.sh'"
+#/home/g/boot-gitea.sh
 
 function PrintUsage {
 #在stderr中打印人类可读的提示信息
@@ -14,7 +17,7 @@ echo -n "${usage}"
 [[ "_$(whoami)" == "_g" ]] ||  {  PrintUsage ; exit 3 ;}
 
 #echo "脚本准开头， \$0==【$0】, whoami==【$(whoami)】"
-cd /home/g/
+cd ${Hm}
 #/home/g/gitea-1.21.2-linux-arm64
 
 #列出目录/home/g/下第一个以gitea-开头的可执行文件的名字，不要全路径
