@@ -3,12 +3,14 @@
 
 Hm=$(pwd)
 #例如 Hm==/home/g
-usage="su - g -c 'bash ${Hm}/boot-gitea.sh'"
-#/home/g/boot-gitea.sh
+usage="su g -c 'bash ${Hm}/boot-gitea-cur-dir.sh'"
+#'su g ...' , 可以 带入 所需要的 调用者所在当前目录。
+#若用'su - g ...' , 则 g用户将新登录，带入的 当前目录是 g的家目录 即 /home/g 这不是所想要的 
+#/home/g/boot-gitea-cur-dir.sh
 
 function PrintUsage {
 #在stderr中打印人类可读的提示信息
-echo -e "\e[1;31m『stderr』【命令用法错误，此命令的正确勤快用法『${usage}』已经放入stdout，因此正确偷懒用法为『\$(bash boot-gitea.sh』】\e[0m" >&2
+echo -e "\e[1;31m『stderr』【命令用法错误，此命令的正确勤快用法『${usage}』已经放入stdout，因此正确偷懒用法为『\$(bash boot-gitea-cur-dir.sh』】\e[0m" >&2
 #在stdout中打印单纯的命令调用语句, 使得 直接 $(bash boot-gitea.sh) 即可正确执行此命令
 echo -n "${usage}"
 }
