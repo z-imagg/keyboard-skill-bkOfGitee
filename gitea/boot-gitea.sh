@@ -3,15 +3,7 @@
 
 usage='su - g -c "bash /home/g/boot-gitea.sh"'
 
-function PrintUsage {
-#在stderr中打印人类可读的提示信息
-echo -e "\e[1;31m『stderr』【命令用法错误，此命令的正确勤快用法『${usage}』已经放入stdout，因此正确偷懒用法为『\$(bash boot-gitea.sh』】\e[0m" >&2
-#在stdout中打印单纯的命令调用语句, 使得 直接 $(bash boot-gitea.sh) 即可正确执行此命令
-echo -n "${usage}"
-}
-
-
-[[ "_$(whoami)" == "_g" ]] ||  {  PrintUsage ; exit 3 ;}
+[[ "_$(whoami)" == "_g" ]] ||  {  echo "请你切换到用户g，再执行此脚本。例子用法【${usage}】,建议别名【alias BootGitea='${usage}'】" ; exit 3 ;}
 
 #echo "脚本准开头， \$0==【$0】, whoami==【$(whoami)】"
 cd /home/g/
