@@ -3,7 +3,7 @@
 
 usage='su - g -c "bash /home/g/shutdown-gitea.sh"'
 
-[[ "_$(whoami)" == "_g" ]] ||  {  echo "请你切换到用户g，再执行此脚本。例子用法【${usage}】" ; exit 3 ;}
+[[ "_$(whoami)" == "_g" ]] ||  {  echo "请你切换到用户g，再执行此脚本。例子用法【${usage}】,建议别名【alias SG='${usage}'】" ; exit 3 ;}
 
 #echo "脚本准开头， \$0==【$0】, whoami==【$(whoami)】"
 cd /home/g/
