@@ -83,11 +83,11 @@ alt + e ; g ;
 ##notepad-- : alt+e e
 #激活窗口或新启动notepad--  按住alt+e松开，按e松开 : Edit notepad--
 alt + e ; e ; 
-      bash /sxScript/win_activ_or_boot_new_full.sh notepad--_subtwo-2.12-x86_64.AppImage Ndd /app/notepad--_subtwo-2.12-x86_64.AppImage
+      bash /sxScript/win_activ_or_boot_new_full.sh Notepad-- Ndd /opt/apps/com.hmja.notepad/files/Notepad--
 #                                            参数1: process_name   参数2: win_name  参数3: cmd_full
 
 ##NotepadNext : alt+e n
-#激活窗口或新启动notepad--  按住alt+e松开，按e松开 : Edit NotepadNext
+#激活窗口或新启动NotepadNext  按住alt+e松开，按e松开 : Edit NotepadNext
 alt + e ; n ; 
       bash /sxScript/win_activ_or_boot_new_full.sh NotepadNext-v0.7-x86_64.AppImage NotepadNext /app/pack/NotepadNext-v0.7-x86_64.AppImage
 #                                            参数1: process_name   参数2: win_name  参数3: cmd_full
