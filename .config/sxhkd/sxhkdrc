@@ -4,6 +4,12 @@
 
 #参考: http://giteaz:3000/misc/sxhkd-xtotool.git
 
+#打开文件浏览器: alt+shift+e  
+#打开文件浏览器: 按住 alt+shift+e 松开
+#打开文件浏览器  
+alt + shift + e ;
+      nautilus &
+
 #重启sxhkd(发送重启指令到命名管道触发外部脚本重启sxhkd):  
 ##sxhkd : alt+shift+x
 #重启sxhkd(发送重启指令到命名管道触发外部脚本重启sxhkd):  按住alt+shift+x松开
