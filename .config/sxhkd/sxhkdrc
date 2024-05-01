@@ -98,6 +98,12 @@ alt + e ; n ;
       bash /sxScript/win_activ_or_boot_new_full.sh NotepadNext-v0.7-x86_64.AppImage NotepadNext /app/pack/NotepadNext-v0.7-x86_64.AppImage
 #                                            参数1: process_name   参数2: win_name  参数3: cmd_full
 
+##konsole : alt+t k
+#激活窗口或新启动konsole:  按住alt+t松开，按k松开 : Terminal konsole
+alt + t ; k ;
+      bash /sxScript/win_activ_or_boot_new_full.sh konsole konsole /usr/bin/konsole
+#                                            参数1: process_name   参数2: win_name  参数3: cmd_full
+
 ##gnome-terminal : alt+t g
 #激活窗口或新启动gnome-terminal:  按住alt+t松开，按g松开 : Terminal gnome-terminal
 alt + t ; g ;
