@@ -49,10 +49,15 @@ alt + Escape ;
 #~{Control_R} ;
 #       zenity   --notification --text "单键测试 : 按住 右Ctrl 松开"
 
-##webstorm : alt+d d
-#激活webstorm窗口:  按住alt+d松开，按d松开 : iDe webstorm
-alt + d ; d ;
-      bash /sxScript/win_activ.sh  webstorm
+##webstorm : alt+d w
+#激活webstorm窗口:  按住alt+d松开，按w松开 : iDe webstorm
+alt + d ; w ;
+      source /sxScript/jetbrains_ide__win_activ_or_boot_new_full.sh &&  jetbrains_ide__win_activ_or_boot_new_full webstorm  /app/WebStorm-223.8836.27/bin/webstorm.sh
+
+##clion : alt+d l
+#激活clion窗口:  按住alt+d松开，按l松开 : iDe clion
+alt + d ; l ;
+      source /sxScript/jetbrains_ide__win_activ_or_boot_new_full.sh &&  jetbrains_ide__win_activ_or_boot_new_full clion  /app/clion-2022.3.3/bin/clion.sh
 
 ##vscode : alt+d c
 #激活vscode窗口:  按住alt+d松开，按c松开 : vscode
