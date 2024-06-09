@@ -6,7 +6,7 @@
 #【术语】 
 #【备注】  
 #【例子用法】  
-#   source /app/keyboard-skill/sxhkd_xdotool_script/jetbrain_java_pid_tool.sh
+#   source /app/keyboard-skill/sxhkd_xdotool_script/jetbrain_java_pid_get.sh
 # 查找是否有clion进程 若有则记下clion进程的pid
 #  注意可能会有多个pid匹配，所以这只是例子。  虽然jetbrains的clion 即使开多个窗口 依然只有一个jvm进程
 #   jetbrains_ide_process_find clion && clion_pid=$(jetbrains_ide_process_find clion) && echo "find_clion,clion_pid=$clion_pid"
@@ -22,22 +22,10 @@ export JAVA_HOME=/app/jdk8
 export PATH=$JAVA_HOME/bin:$PATH
 #which jcmd==/app/jdk8/bin/jcmd
 
-#sun_jvm按照sun.java.command查找pid
-function sun_jvm_pid__sun_java_command__contains_word(){
-local word=$1
-local pid=$2
-jcmd $pid VM.system_properties 2>/dev/null | grep sun.java.command | grep $word
-}
-#函数单元测试
-#sun_jvm_pid__sun_java_command__contains_word jdk.jshell
-
-
 function jetbrains_jvm_pid_is_x(){
 local jetbrains_ide_name=$1
 #jetbrains_ide_name := [clion, idea, pycharm, ...]
 local pid=$2
-sun_jvm_pid__sun_java_command__contains_word com.intellij.idea.Main $pid && \
-#确认是jetbrains的ide的jvm进程 才会继续查找 jetbrains特有的jb.vmOptionsFile
 jcmd $pid VM.system_properties 2>/dev/null | grep jb.vmOptionsFile | grep  "${jetbrains_ide_name}64.vmoptions\|${jetbrains_ide_name}.vmoptions" 1>/dev/null 2>/dev/null
 }
 #函数单元测试
