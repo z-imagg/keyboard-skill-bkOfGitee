@@ -25,13 +25,13 @@ echo "[收到入参] jetbrain_ide_name=【$jetbrain_ide_name】,win_name=【$win
 local has_process=false
 jetbrains_ide_process_find $jetbrain_ide_name && jetbrain_ide_jvm_pid=$(jetbrains_ide_process_find $jetbrain_ide_name)  && has_process=true
 
-set -x
 #若已有该进程，则激活窗口即可
-$has_process && xdotool search --onlyvisible  "$win_name" windowactivate && { set +x; return $OK ;}
+local msg_actvWin="激活现有窗口jetbrain_ide, win_name=[$win_name]"
+$has_process && xdotool search --onlyvisible  "$win_name" windowactivate && { echo "$msg_actvWin"; return $OK ;}
 
 #否则（尚无该进程） ，则后台启动新启动
-local msg="新启动jetbrain_ide【$cmd_full】"
-( echo "$msg" && $cmd_full & )  &&  { set +x; return $OK ;}
+local msg_newBoot="新启动jetbrain_ide, cmd_full=[$cmd_full]"
+(  $cmd_full & )  &&  { echo "$msg_newBoot"; return $OK ;}
 
 
 #调试语句（给定窗口名，打印窗口id、命令全路径、窗口全名）：
