@@ -1,6 +1,19 @@
 #!/bin/sh
 
 #[描述] 查找是否有jetbrains系列ide的jvm进程
+#[使用说明]
+
+#【描述】  查找是否有jetbrains系列ide的jvm进程
+#【依赖】   
+#【术语】 
+#【备注】  
+#【例子用法】  
+#   source /app/keyboard-skill/sxhkd_xdotool_script/jetbrain_java_pid_tool.sh
+#   jetbrains_ide_process_find clion && echo find_clion  #查找是否有clion进程
+
+
+#'-e': 任一语句异常将导致此脚本终止; '-u': 使用未声明变量将导致异常
+set -e -u
 
 export JAVA_HOME=/app/jdk8
 export PATH=$JAVA_HOME/bin:$PATH
