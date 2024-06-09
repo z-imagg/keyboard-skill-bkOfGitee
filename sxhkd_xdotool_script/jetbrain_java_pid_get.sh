@@ -23,10 +23,14 @@ export PATH=$JAVA_HOME/bin:$PATH
 #which jcmd==/app/jdk8/bin/jcmd
 
 
+
+
 function jetbrains_jvm_pid_is_x(){
 local jetbrains_ide_name=$1
 #jetbrains_ide_name := [clion, idea, pycharm, ...]
 local pid=$2
+jcmd $pid VM.system_properties 2>/dev/null | grep sun.java.command=com.intellij.idea.Main && \
+#确认是jetbrains的ide的jvm进程 才会继续查找 jetbrains特有的jb.vmOptionsFile
 jcmd $pid VM.system_properties 2>/dev/null | grep jb.vmOptionsFile | grep  "${jetbrains_ide_name}64.vmoptions\|${jetbrains_ide_name}.vmoptions" 1>/dev/null 2>/dev/null
 }
 #函数单元测试
@@ -65,6 +69,9 @@ return $NO
 #jetbrains_ide_process_find pycharm && echo find_pycharm
 
 #开发用语句:
-#pid=$(/app/jdk8/bin/jps -l | grep idea|cut -d' ' -f1)
-# /app/jdk8/bin/jcmd $pid VM.system_properties | grep jb.vmOptionsFile | grep  "clion64.vmoptions\|clion.vmoptions"
-# jb.vmOptionsFile=/app/clion-2022.3.3/bin/clion64.vmoptions
+# /app/jdk8/bin/jcmd  -l  #列出jvm进程 供给人工观看
+# /app/jdk8/bin/jps  -q | while IFS= read -r pid_j ; do  echo -n "$pid_j:  " &&  /app/jdk8/bin/jcmd   $pid_j VM.system_properties  | grep -i sun.java.command; done
+# 4130:  sun.java.command=com.intellij.idea.Main
+# 12503:  sun.java.command=jdk.jshell.execution.RemoteExecutionControl 34013
+# 14318:  java.io.IOException: 没有那个进程
+# 12478:  sun.java.command=jdk.jshell/jdk.internal.jshell.tool.JShellToolProvider
